@@ -1,7 +1,6 @@
 # Events CRUD
 
 You can download the APK [here][apk] or see the images [here][images].
-It was developed to serve as an example of RxJava, MVP and Clean Architecture.
 
 ## Description
 
