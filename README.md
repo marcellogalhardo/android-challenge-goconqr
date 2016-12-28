@@ -1,6 +1,6 @@
 # Events CRUD
 
-You can download the APK [here][apk].
+You can download the APK [here][apk] or see the images [here][images].
 It was developed to serve as an example of RxJava, MVP and Clean Architecture.
 
 ## Description
@@ -30,17 +30,18 @@ Write an Android application in Java that can:
 9. It was some unit testing with JUnit and Mockito (see test folder).
 10. It was some Ui tests with Espresso (see androidTest folder).
 
-Obs: Unit and Ui tests *must run with Mock flavor*.
+*Important:* Unit and Ui tests *must run with Mock flavor*.
 
 ## UX / UI
 
 ![Events][design-events]
+![Events][design-error]
 ![Events][design-add-event]
 ![Events][design-loading]
-![Events][design-error]
 
 [apk]: https://github.com/marcellogalhardo/events/releases/download/1.0.0/application.apk
+[images]: https://github.com/marcellogalhardo/events/tree/master/images
 [design-events]: https://github.com/marcellogalhardo/events/blob/1.0.0/images/events.png
 [design-add-event]: https://github.com/marcellogalhardo/events/blob/1.0.0/images/add_event.png
-[design-loading]: https://github.com/marcellogalhardo/events/blob/1.0.0/images/events.png
+[design-loading]: https://github.com/marcellogalhardo/events/blob/master/images/loading.png
 [design-error]: https://github.com/marcellogalhardo/events/blob/1.0.0/images/error.png
