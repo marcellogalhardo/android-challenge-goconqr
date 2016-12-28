@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingTop="@dimen/margin_small">
+
+    <ImageView
+        android:id="@+id/title"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_activity"
+        android:layout_marginStart="@dimen/margin_activity"
+        tools:background="@color/colorAccent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_marginRight="@dimen/margin_default"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_toEndOf="@+id/title"
+        android:layout_toLeftOf="@+id/remove"
+        android:layout_toRightOf="@+id/title"
+        android:layout_toStartOf="@+id/remove"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/AppTheme.EventList.Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            tools:name="Title" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/AppTheme.EventList.Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            tools:name="description" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/margin_activity"
+        android:layout_marginRight="@dimen/margin_activity"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_close" />
+
+    <View
+        style="@style/AppTheme.Divider"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_toEndOf="@+id/title"
+        android:layout_toRightOf="@+id/title" />
+
+</RelativeLayout>
+

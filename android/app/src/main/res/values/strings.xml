@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Events</string>
+    <string name="save">Save</string>
+    <string name="event_name">Event name</string>
+    <string name="date">Date</string>
+    <string name="none">None</string>
+    <string name="error_unknown">Oh, no! Something goes wrong.</string>
+    <string name="error_synced_problem">Not synced. Please, restart the app.</string>
+    <string name="add_event">Add Event</string>
+    <string name="success_add_event">Event add with success!</string>
+    <string name="error_try_again_later">An error has occurred. Try again later!</string>
+    <string name="error_empty_name">Name cannot be empty.</string>
+    <string name="error_date_smaller_than_now">Start data cannot be smaller than the current data.</string>
+    <string name="error_end_date_smaller_than_start_date">End date cannot be smaller than the starting date.</string>
+    <string name="retry">Retry</string>
+    <string name="fetching_events">Fetching events...</string>
+</resources>

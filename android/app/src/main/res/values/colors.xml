@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- System colors -->
+    <color name="colorPrimary">@color/blue</color>
+    <color name="colorPrimaryDark">@color/darkest_blue</color>
+    <color name="colorAccent">@color/dark_blue</color>
+
+    <!-- Palette colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="light_black">#050402</color>
+    <color name="cold_grey">#606e77</color>
+    <color name="light_grey">#d6d5d3</color>
+    <color name="darkest_blue">#1b4e8d</color>
+    <color name="dark_blue">#195d9a</color>
+    <color name="blue">#20609e</color>
+
+</resources>

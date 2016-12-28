@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/light_grey</item>
+    </style>
+
+    <!-- Event list theme. -->
+    <style name="AppTheme.EventList" />
+
+    <style name="AppTheme.EventList.Name" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/light_black</item>
+    </style>
+
+    <style name="AppTheme.EventList.Description" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textColor">@color/cold_grey</item>
+    </style>
+
+    <!-- Add event theme. -->
+    <style name="AppTheme.AddEvent" />
+
+    <style name="AppTheme.AddEvent.Name" parent="TextAppearance.AppCompat.Title" />
+
+    <!-- Date Picker View -->
+    <style name="AppTheme.DatePickerView" />
+
+    <style name="AppTheme.DatePickerView.Name" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textColor">@color/light_black</item>
+    </style>
+
+    <style name="AppTheme.DatePickerView.Value" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">@color/cold_grey</item>
+    </style>
+
+</resources>

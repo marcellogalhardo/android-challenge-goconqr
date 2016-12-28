@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:layout_marginLeft="@dimen/margin_default"
+            android:layout_marginRight="@dimen/margin_default"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_default">
+
+            <EditText
+                android:id="@+id/name"
+                style="@style/AppTheme.AddEvent.Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/event_name"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <br.com.marcellogalhardo.goconqr.widget.DatePickerView
+            android:id="@+id/start_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_small"
+            android:paddingEnd="@dimen/margin_default"
+            android:paddingLeft="@dimen/margin_default"
+            android:paddingRight="@dimen/margin_default"
+            android:paddingStart="@dimen/margin_default"
+            app:name="Start date" />
+
+        <br.com.marcellogalhardo.goconqr.widget.DatePickerView
+            android:id="@+id/end_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_default"
+            android:paddingEnd="@dimen/margin_default"
+            android:paddingLeft="@dimen/margin_default"
+            android:paddingRight="@dimen/margin_default"
+            android:paddingStart="@dimen/margin_default"
+            app:name="End date" />
+
+        <View
+            style="@style/AppTheme.Divider"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/add_event_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:layout_marginRight="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_default"
+            android:text="@string/save" />
+
+    </LinearLayout>
+
+</ScrollView>
