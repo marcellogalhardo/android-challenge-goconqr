@@ -14,21 +14,21 @@ Write an Android application in Java that can:
 
 ## Implementation Details
 
-1. It's use the concept of Package by Feature / Domain.
-2. It's use MVP pattern for presentation and to make tests easier.
-3. It's use Dagger for Dependency Injection.
-4. It's use Repository Pattern with OkHttp, Retrofit and Json for data loading.
-5. It's use RxJava with Retrolambda.
-6. It's use ButterKnife for view bind.
-7. It was some animations:
+1. It use the concept of Package by Feature / Domain.
+2. It use MVP pattern for presentation and to make tests easier.
+3. It use Dagger for Dependency Injection.
+4. It use Repository Pattern with OkHttp, Retrofit and Json for data loading.
+5. It use RxJava with Retrolambda.
+6. It use ButterKnife for view bind.
+7. It has some animations:
 7.1. Transition between activities;
 7.2. Ripple effect in touch;
 7.3. Fade out when delete;
 7.4. Up from bottom when scroll.
-8. It's use SVG.
-9. It was some unit testing with JUnit and Mockito (see test folder).
-10. It was some Ui tests with Espresso (see androidTest folder).
-11. It's use CustomView implementation with parameters by XML (see DatePickerView).
+8. It use SVG.
+9. It has some unit testing with JUnit and Mockito (see test folder).
+10. It has some Ui tests with Espresso (see androidTest folder).
+11. It use CustomView implementation with parameters by XML (see DatePickerView).
 
 *Important:* Unit and Ui tests *must run with Mock flavor*.
 
