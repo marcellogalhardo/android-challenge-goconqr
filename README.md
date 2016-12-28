@@ -10,7 +10,6 @@ Write an Android application in Java that can:
 - GET a list of events.
 - POST a new event.
 - DELETE an existing event.
-- The application should display validation errors when appropriate.
 
 ## Implementation Details
 
@@ -30,7 +29,7 @@ Write an Android application in Java that can:
 10. It has some Ui tests with Espresso (see androidTest folder).
 11. It use CustomView implementation with parameters by XML (see DatePickerView).
 
-*Important:* Unit and Ui tests *must run with Mock flavor*.
+**Important:** Unit and Ui tests **must run with Mock flavor**.
 
 ## UX / UI
 
