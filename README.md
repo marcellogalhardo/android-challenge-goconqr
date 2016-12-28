@@ -39,8 +39,8 @@ Obs: Unit and Ui tests *must run with Mock flavor*.
 ![Events][design-loading]
 ![Events][design-error]
 
-[apk]: 
-[design-events]:
-[design-add-event]:
-[design-loading]:
-[design-error]:
+[apk]: https://github.com/marcellogalhardo/events/releases/download/1.0.0/application.apk
+[design-events]: https://github.com/marcellogalhardo/events/blob/1.0.0/images/events.png
+[design-add-event]: https://github.com/marcellogalhardo/events/blob/1.0.0/images/add_event.png
+[design-loading]: https://github.com/marcellogalhardo/events/blob/1.0.0/images/events.png
+[design-error]: https://github.com/marcellogalhardo/events/blob/1.0.0/images/error.png
