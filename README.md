@@ -28,6 +28,7 @@ Write an Android application in Java that can:
 8. It's use SVG.
 9. It was some unit testing with JUnit and Mockito (see test folder).
 10. It was some Ui tests with Espresso (see androidTest folder).
+11. It's use CustomView implementation with parameters by XML (see DatePickerView).
 
 *Important:* Unit and Ui tests *must run with Mock flavor*.
 
