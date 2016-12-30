@@ -4,10 +4,14 @@ import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.ViewFlipper;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
+@Singleton
 public class ViewFlipperUtil {
 
-    private boolean isValidChildIndex(@NonNull ViewFlipper flipper, int index) {
-        return index < flipper.getChildCount() && index >= 0;
+    @Inject
+    ViewFlipperUtil() {
     }
 
     public boolean isValidChild(@NonNull ViewFlipper flipper, View child) {
@@ -26,6 +30,10 @@ public class ViewFlipperUtil {
                 flipper.setDisplayedChild(index);
             }
         }
+    }
+
+    private boolean isValidChildIndex(@NonNull ViewFlipper flipper, int index) {
+        return index < flipper.getChildCount() && index >= 0;
     }
 
 }

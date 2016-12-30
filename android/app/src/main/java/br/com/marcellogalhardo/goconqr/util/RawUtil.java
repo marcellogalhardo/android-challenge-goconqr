@@ -6,9 +6,17 @@ import android.util.Log;
 
 import java.io.InputStream;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
+@Singleton
 public class RawUtil {
 
     private static final String TAG = RawUtil.class.getSimpleName();
+
+    @Inject
+    RawUtil() {
+    }
 
     public String readTextFile(Resources resources, @RawRes int rawId) {
         String result = "";
