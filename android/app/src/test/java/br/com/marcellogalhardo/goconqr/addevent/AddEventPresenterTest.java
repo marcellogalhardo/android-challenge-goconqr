@@ -38,7 +38,7 @@ public class AddEventPresenterTest {
     @Test
     public void addNewEventWithSuccess() {
         Event event = createEvent();
-        when(repository.addEvent(event)).then(invocation -> Observable.just(event));
+        when(repository.add(event)).then(invocation -> Observable.just(event));
         presenter.addEvent(event);
         verify(view, times(1)).showSuccessToast();
         verify(view, times(1)).finishWithResponse(event);
@@ -47,7 +47,7 @@ public class AddEventPresenterTest {
     @Test
     public void addNewEventWithError() {
         Event event = createEvent();
-        when(repository.addEvent(event)).then(invocation -> Observable.error(new Exception()));
+        when(repository.add(event)).then(invocation -> Observable.error(new Exception()));
         presenter.addEvent(event);
         verify(view, times(1)).showErrorToast();
     }

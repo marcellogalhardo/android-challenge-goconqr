@@ -2,6 +2,8 @@ package br.com.marcellogalhardo.goconqr;
 
 import android.app.Application;
 
+import com.orhanobut.hawk.Hawk;
+
 public class MainApplication extends Application {
 
     private MainComponent component;
@@ -14,6 +16,7 @@ public class MainApplication extends Application {
 
     private void init() {
         initDagger();
+        initHawk();
     }
 
     private void initDagger() {
@@ -21,6 +24,10 @@ public class MainApplication extends Application {
                 .applicationModule(new ApplicationModule(this))
                 .build();
         component.inject(this);
+    }
+
+    private void initHawk() {
+        Hawk.init(this).build();
     }
 
     public MainComponent getComponent() {

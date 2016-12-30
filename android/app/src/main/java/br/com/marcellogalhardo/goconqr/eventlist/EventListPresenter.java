@@ -33,7 +33,7 @@ public class EventListPresenter implements EventListContract.Presenter {
     @Override
     public void loadEvents() {
         view.showLoading();
-        eventRepository.getEvents().subscribe(events -> {
+        eventRepository.getAll().subscribe(events -> {
             view.addAllEvents(events);
             view.showContent();
         }, throwable -> {
@@ -43,7 +43,7 @@ public class EventListPresenter implements EventListContract.Presenter {
 
     @Override
     public void removeEvent(final int position, Event event) {
-        eventRepository.removeEvent(event.id).subscribe(none -> {
+        eventRepository.remove(event.id).subscribe(none -> {
             view.removeEvent(position);
         }, throwable -> {
             view.showRemoveErrorMessage();

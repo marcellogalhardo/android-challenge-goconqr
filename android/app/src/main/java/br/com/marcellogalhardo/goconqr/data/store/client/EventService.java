@@ -1,4 +1,4 @@
-package br.com.marcellogalhardo.goconqr.data.store.remote;
+package br.com.marcellogalhardo.goconqr.data.store.client;
 
 import java.util.List;
 

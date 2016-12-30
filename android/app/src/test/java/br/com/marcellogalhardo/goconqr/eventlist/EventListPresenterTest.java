@@ -39,7 +39,7 @@ public class EventListPresenterTest {
 
     @Test
     public void getSuccessWhenTryToCallGetEventsFromRepositoryAndShowContentLayout() {
-        when(repository.getEvents()).then(invocation -> createEventList());
+        when(repository.getAll()).then(invocation -> createEventList());
         presenter.loadEvents();
         verify(view, times(1)).showLoading();
         verify(view, times(1)).showContent();
@@ -47,7 +47,7 @@ public class EventListPresenterTest {
 
     @Test
     public void getErrorWhenTryToCallGetEventsFromRepositoryAndShowErrorLayout() {
-        when(repository.getEvents()).then(invocation -> createGenericError());
+        when(repository.getAll()).then(invocation -> createGenericError());
         presenter.loadEvents();
         verify(view, times(1)).showLoading();
         verify(view, times(1)).showError();
@@ -55,14 +55,14 @@ public class EventListPresenterTest {
 
     @Test
     public void getSuccessWhenTryToRemoveEventWithSuccess() {
-        when(repository.removeEvent(0)).then(invocation -> createGenericSuccess());
+        when(repository.remove(0)).then(invocation -> createGenericSuccess());
         presenter.removeEvent(0, new Event());
         verify(view, times(1)).removeEvent(0);
     }
 
     @Test
     public void getSuccessWhenTryToRemoveEventWithError() {
-        when(repository.removeEvent(0)).then(invocation -> createGenericError());
+        when(repository.remove(0)).then(invocation -> createGenericError());
         presenter.removeEvent(0, new Event());
         verify(view, times(1)).showRemoveErrorMessage();
     }

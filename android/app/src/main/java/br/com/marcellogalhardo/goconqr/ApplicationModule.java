@@ -3,6 +3,8 @@ package br.com.marcellogalhardo.goconqr;
 import android.app.Application;
 import android.content.Context;
 
+import com.orhanobut.hawk.Hawk;
+
 import javax.inject.Singleton;
 
 import dagger.Module;
@@ -28,4 +30,5 @@ public class ApplicationModule {
     Context providesContext(Application application) {
         return application.getBaseContext();
     }
+
 }

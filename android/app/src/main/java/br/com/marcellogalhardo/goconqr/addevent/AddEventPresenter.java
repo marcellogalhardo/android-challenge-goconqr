@@ -31,7 +31,7 @@ public class AddEventPresenter implements AddEventContract.Presenter {
 
     @Override
     public void addEvent(Event event) {
-        eventRepository.addEvent(event).subscribe(newEvent -> {
+        eventRepository.add(event).subscribe(newEvent -> {
             view.showSuccessToast();
             view.finishWithResponse(newEvent);
         }, throwable -> {
