@@ -35,7 +35,7 @@ Write an Android application in Java that can:
 ![Events][design-add-event]
 ![Events][design-loading]
 
-[apk]: https://github.com/marcellogalhardo/events/releases/download/1.0.0/application.apk
+[apk]: https://github.com/marcellogalhardo/events/archive/1.1.0.zip
 [images]: https://github.com/marcellogalhardo/events/tree/master/images
 [design-events]: https://github.com/marcellogalhardo/events/blob/1.0.0/images/events.png
 [design-add-event]: https://github.com/marcellogalhardo/events/blob/1.0.0/images/add_event.png
