@@ -15,7 +15,7 @@ public class RawUtil {
     private static final String TAG = RawUtil.class.getSimpleName();
 
     @Inject
-    RawUtil() {
+    public RawUtil() {
     }
 
     public String readTextFile(Resources resources, @RawRes int rawId) {
