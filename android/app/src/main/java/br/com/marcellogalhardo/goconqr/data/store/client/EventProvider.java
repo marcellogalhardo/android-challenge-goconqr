@@ -7,9 +7,9 @@ import java.util.List;
 import br.com.marcellogalhardo.goconqr.data.Event;
 import rx.Observable;
 
-public class EventCache {
+public class EventProvider {
 
-    private static final String TAG = EventCache.class.getSimpleName();
+    private static final String TAG = EventProvider.class.getSimpleName();
 
     public Observable<List<Event>> add(List<Event> events) {
         return Observable.create(subscriber -> {

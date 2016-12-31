@@ -13,12 +13,13 @@ import java.util.Calendar;
 import java.util.Date;
 
 import br.com.marcellogalhardo.goconqr.R;
+import br.com.marcellogalhardo.goconqr.util.CalendarUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class DatePickerView extends CustomFrameLayout {
 
-    private final Calendar calendar = Calendar.getInstance();
+    private final Calendar calendar = new CalendarUtil().getNow();
     private Context context;
     private String attrName;
 

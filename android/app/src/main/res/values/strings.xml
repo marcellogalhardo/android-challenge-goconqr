@@ -10,6 +10,8 @@
     <string name="success_add_event">Event add with success!</string>
     <string name="error_try_again_later">An error has occurred. Try again later!</string>
     <string name="error_empty_name">Name cannot be empty.</string>
+    <string name="error_start_date_cannot_be_empty">Start data cannot be smaller than the current data.</string>
+    <string name="error_end_date_cannot_be_empty">End data cannot be smaller than the current data.</string>
     <string name="error_date_smaller_than_now">Start data cannot be smaller than the current data.</string>
     <string name="error_end_date_smaller_than_start_date">End date cannot be smaller than the starting date.</string>
     <string name="retry">Retry</string>

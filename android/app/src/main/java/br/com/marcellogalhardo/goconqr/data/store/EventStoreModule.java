@@ -2,7 +2,7 @@ package br.com.marcellogalhardo.goconqr.data.store;
 
 import javax.inject.Singleton;
 
-import br.com.marcellogalhardo.goconqr.data.store.client.EventCache;
+import br.com.marcellogalhardo.goconqr.data.store.client.EventProvider;
 import br.com.marcellogalhardo.goconqr.data.store.client.EventService;
 import dagger.Module;
 import dagger.Provides;
@@ -13,8 +13,8 @@ public class EventStoreModule {
 
     @Provides
     @Singleton
-    EventRepository providesEventRepository(EventService eventService, EventCache eventCache) {
-        return new EventRepository(eventService, eventCache);
+    EventRepository providesEventRepository(EventService eventService, EventProvider eventProvider) {
+        return new EventRepository(eventService, eventProvider);
     }
 
     @Provides
@@ -25,8 +25,8 @@ public class EventStoreModule {
 
     @Provides
     @Singleton
-    EventCache providesEventCache() {
-        return new EventCache();
+    EventProvider providesEventCache() {
+        return new EventProvider();
     }
 
 }

@@ -9,6 +9,7 @@ import br.com.marcellogalhardo.goconqr.data.store.EventStoreModule;
 import br.com.marcellogalhardo.goconqr.eventlist.EventListActivity;
 import br.com.marcellogalhardo.goconqr.eventlist.EventListFragment;
 import br.com.marcellogalhardo.goconqr.eventlist.EventListModule;
+import br.com.marcellogalhardo.goconqr.util.CalendarUtil;
 import br.com.marcellogalhardo.goconqr.util.FragmentUtil;
 import br.com.marcellogalhardo.goconqr.util.RawUtil;
 import br.com.marcellogalhardo.goconqr.util.ViewFlipperUtil;
@@ -39,5 +40,7 @@ public interface MainComponent {
     RawUtil rawUtil();
 
     ViewFlipperUtil viewFlipperUtil();
+
+    CalendarUtil calendarUtil();
 
 }

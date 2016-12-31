@@ -5,10 +5,6 @@ import javax.inject.Inject;
 import br.com.marcellogalhardo.goconqr.data.Event;
 import br.com.marcellogalhardo.goconqr.data.store.EventRepository;
 
-/**
- * Created by marcello on 27/12/16.
- */
-
 public class AddEventPresenter implements AddEventContract.Presenter {
 
     private AddEventContract.View view;

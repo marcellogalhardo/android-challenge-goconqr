@@ -17,18 +17,15 @@ import javax.inject.Inject;
 import br.com.marcellogalhardo.goconqr.R;
 import br.com.marcellogalhardo.goconqr.base.BaseFragment;
 import br.com.marcellogalhardo.goconqr.data.Event;
+import br.com.marcellogalhardo.goconqr.util.CalendarUtil;
 import br.com.marcellogalhardo.goconqr.widget.DatePickerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-/**
- * Created by marcello on 27/12/16.
- */
-
 public class AddEventFragment extends BaseFragment implements AddEventContract.View {
 
-    @BindView(R.id.view_date_picker_name)
+    @BindView(R.id.name)
     TextView name;
 
     @BindView(R.id.start_date)
@@ -39,6 +36,9 @@ public class AddEventFragment extends BaseFragment implements AddEventContract.V
 
     @Inject
     AddEventContract.Presenter presenter;
+
+    @Inject
+    CalendarUtil calendarUtil;
 
     public static AddEventFragment newInstance() {
         Bundle args = new Bundle();
@@ -97,9 +97,17 @@ public class AddEventFragment extends BaseFragment implements AddEventContract.V
         } else {
             name.setError(null);
         }
-        Date now = getNow();
+        Date now = calendarUtil.getNow().getTime();
+        if (event.start.equals(now)) {
+            Toast.makeText(getActivity(), R.string.error_start_date_cannot_be_empty, Toast.LENGTH_SHORT).show();
+            hasErrors = true;
+        }
         if (event.start.before(now)) {
             Toast.makeText(getActivity(), R.string.error_date_smaller_than_now, Toast.LENGTH_SHORT).show();
+            hasErrors = true;
+        }
+        if (event.end.equals(now)) {
+            Toast.makeText(getActivity(), R.string.error_end_date_cannot_be_empty, Toast.LENGTH_SHORT).show();
             hasErrors = true;
         }
         if (event.start.after(event.end)) {
@@ -107,17 +115,6 @@ public class AddEventFragment extends BaseFragment implements AddEventContract.V
             hasErrors = true;
         }
         return hasErrors;
-    }
-
-    public Date getNow() {
-        Calendar calendar = Calendar.getInstance();
-
-        calendar.set(Calendar.HOUR_OF_DAY, 0);
-        calendar.set(Calendar.MINUTE, 0);
-        calendar.set(Calendar.SECOND, 0);
-        calendar.set(Calendar.MILLISECOND, 0);
-
-        return calendar.getTime();
     }
 
 }

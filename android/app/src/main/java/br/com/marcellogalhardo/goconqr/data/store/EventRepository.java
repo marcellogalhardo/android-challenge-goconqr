@@ -7,7 +7,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import br.com.marcellogalhardo.goconqr.data.Event;
-import br.com.marcellogalhardo.goconqr.data.store.client.EventCache;
+import br.com.marcellogalhardo.goconqr.data.store.client.EventProvider;
 import br.com.marcellogalhardo.goconqr.data.store.client.EventService;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
@@ -16,12 +16,12 @@ import rx.schedulers.Schedulers;
 public class EventRepository {
 
     private EventService eventService;
-    private EventCache eventCache;
+    private EventProvider eventProvider;
 
     @Inject
-    EventRepository(EventService eventService, EventCache eventCache) {
+    EventRepository(EventService eventService, EventProvider eventProvider) {
         this.eventService = eventService;
-        this.eventCache = eventCache;
+        this.eventProvider = eventProvider;
     }
 
     public Observable<List<Event>> getAll() {
@@ -29,12 +29,12 @@ public class EventRepository {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .concatMap(events -> {
-                    eventCache.delete();
-                    return eventCache.add(events);
+                    eventProvider.delete();
+                    return eventProvider.add(events);
                 })
                 .onErrorResumeNext(throwable -> {
                     if (throwable instanceof IOException) {
-                        return eventCache.getAll();
+                        return eventProvider.getAll();
                     }
                     return Observable.error(throwable);
                 })

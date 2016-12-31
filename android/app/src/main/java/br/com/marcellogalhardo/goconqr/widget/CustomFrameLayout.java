@@ -10,10 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 
-/**
- * Created by marcello on 27/12/16.
- */
-
 public abstract class CustomFrameLayout extends FrameLayout {
 
     public CustomFrameLayout(Context context) {

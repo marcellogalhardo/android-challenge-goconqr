@@ -8,10 +8,6 @@ import android.support.v4.app.FragmentActivity;
 import br.com.marcellogalhardo.goconqr.R;
 import br.com.marcellogalhardo.goconqr.data.Event;
 
-/**
- * Created by marcello on 27/12/16.
- */
-
 public class AddEventNavigator {
 
     public static final int REQUEST_CODE = 1234;
