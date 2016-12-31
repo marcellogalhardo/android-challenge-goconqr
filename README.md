@@ -24,6 +24,7 @@ Write an Android application in Java that can:
 9. It has some unit testing with JUnit and Mockito (see test folder).
 10. It has some Ui tests with Espresso (see androidTest folder).
 11. It use CustomView implementation with parameters by XML (see DatePickerView).
+12. It use Hawk to cache (work offline).
 
 **Important:** Unit and Ui tests **must run with Mock flavor**.
 
